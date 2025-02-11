@@ -156,14 +156,23 @@ class EmailLog {
 	}
 
 	/**
+	 * Load Textdomain
+	 */
+	public function load_textdomain() {
+		if ( $this->loaded ) {
+			return;
+		}
+
+		load_plugin_textdomain( 'email-log', false, $this->translations_path );
+	}
+
+	/**
 	 * Load the plugin.
 	 */
 	public function load() {
 		if ( $this->loaded ) {
 			return;
 		}
-
-		load_plugin_textdomain( 'email-log', false, $this->translations_path );
 
 		$this->table_manager->load();
 
