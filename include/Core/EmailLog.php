@@ -28,6 +28,7 @@ class EmailLog {
 	 * Flag to track if the plugin is loaded.
 	 *
 	 * @since 2.0
+	 *
 	 * @access private
 	 *
 	 * @var bool
@@ -38,6 +39,7 @@ class EmailLog {
 	 * Flag to override plugin API.
 	 *
 	 * @since 2.4.5
+	 *
 	 * @access private
 	 *
 	 * @var bool
@@ -48,6 +50,7 @@ class EmailLog {
 	 * Plugin file path.
 	 *
 	 * @since 2.0
+	 *
 	 * @access private
 	 *
 	 * @var string
@@ -156,7 +159,7 @@ class EmailLog {
 	}
 
 	/**
-	 * Load Textdomain
+	 * Load Textdomain.
 	 */
 	public function load_textdomain() {
 		if ( $this->loaded ) {
